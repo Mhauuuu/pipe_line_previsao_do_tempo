@@ -30,6 +30,7 @@ jobs:
         run: |
           git config --global user.name "Robo Actions"
           git config --global user.email "robo@github.com"
-          git add previsao_tempo_recife.csv
+          git add .
           git commit -m "bot: atualiza os dados do clima" || echo "Sem mudanças"
           git push
+
