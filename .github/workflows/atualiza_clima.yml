@@ -26,11 +26,11 @@ jobs:
       - name: Rodar o nosso ETL
         run: python clima.py
 
-      - name: Salvar o novo CSV de volta no GitHub
+      - name: Salvar o banco de dados no GitHub
         run: |
           git config --global user.name "Robo Actions"
           git config --global user.email "robo@github.com"
-          git add .
-          git commit -m "bot: atualiza os dados do clima" || echo "Sem mudanças"
+          git add banco_clima.db
+          git commit -m "bot: atualiza o banco de dados SQL" || echo "Sem mudanças"
           git push
 
